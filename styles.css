@@ -1,0 +1,179 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F6DDD3ff;
+}
+
+
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+    .hamburger-menu input[type="checkbox"] {
+        display: none;
+    }
+
+    .hamburger-menu label {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: rgb(252, 3, 3); /* Hamburger lines color */
+        margin-bottom: 5px;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        transition: transform 0.3s ease;
+    }
+
+        .hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-menu span:nth-child(2) {
+            top: 8px;
+        }
+
+        .hamburger-menu span:nth-child(3) {
+            top: 16px;
+        }
+
+    /* Styles for Hamburger Menu when Checked (Open) */
+    .hamburger-menu input[type="checkbox"]:checked + label span:nth-child(1) {
+        top: 8px;
+        transform: rotate(45deg);
+    }
+
+    .hamburger-menu input[type="checkbox"]:checked + label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu input[type="checkbox"]:checked + label span:nth-child(3) {
+        top: 8px;
+        transform: rotate(-45deg);
+    }
+
+.menu-items {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .menu-items {
+    display: block;
+}
+
+.menu-items li {
+    margin-bottom: 10px;
+}
+
+
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+
+
+
+.navcontainer{
+    display: flex;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    padding:7   px 0;
+   
+}
+.lnavbox{
+    display: flex;
+    width: 47%;
+}
+.rnavbox{
+    display: flex;
+    width: 50%;
+    justify-content: end;
+    
+}
+
+.rnavbox a{
+      padding: 0 7px;
+    font-size: 20px;
+    color: orangered;
+}
+
+
+.hero-section{
+    width: 100vw;
+    height:100vh;
+    border-bottom: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+}
+
+.hero-text {
+    font-size: 7em;
+    color:
+  
+    text-align: center;
+    z-index: 0; /* Ensure the text appears above the image */
+}
+
+
+.hero-img {
+    position: absolute;
+    top: 19%;
+    left: 26%;
+    width: 65%;
+    height: 75%;
+    z-index: 1; /* Set the z-index to be lower than the text to place it behind */
+   
+}
+
+.hero-img img {
+    background-color: transparent;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.hero-buttons{
+    
+
+}
+.lbtn{ 
+    background-color: #E12E29ff;
+    color: white;
+    padding:10px;
+    margin: 0 px;
+}
+
+.rbtn{ 
+    background-color: #E12E29ff;
+    color: white;
+    padding:10px;
+}
