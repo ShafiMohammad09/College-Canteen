@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Page</title>
+  <style>
+    /* CSS HEX colors */
+    :root {
+      --cinereous: #90807Fff;
+      --champagne-pink: #F6DDD3ff;
+      --red-cmyk: #E12E29ff;
+      --white-smoke: #F1F3F1ff;
+      --snow: #FFF5F4ff;
+      --bright-pink: #FF6090ff;
+      --bright-blue: #6090FFff;
+      --bright-yellow: #FFFF90ff; /* New bright yellow color */
+    }
+
+    body {
+      background-color: var(--champagne-pink); /* Background color set to champagne-pink */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-container {
+      background-image: linear-gradient(rgba(246, 221, 211, 0.8), rgba(246, 221, 211, 0.8)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWXOcHufw1fveYvsR48eZtnw6RG1KF1ANfKg&usqp=CAU.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      background-color: var(--champagne-pink);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .login-container h1 {
+      text-align: center;
+      color: var(--red-cmyk);
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .login-form label {
+      color:#5E548E; /* Updated label color to bright yellow */
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .login-form input[type="submit"] {
+      background-color: var(--bright-blue);
+      color: var(--champagne-pink);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-form input[type="submit"]:hover {
+      background-color: var(--white-smoke);
+    }
+
+    /* Sign-up button */
+    .sign-up-button {
+      background-color: var(--red-cmyk);
+      color: var(--champagne-pink);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .sign-up-button:hover {
+      background-color: #d0201a;
+    }
+
+    /* The sign-up form pop-up/modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--champagne-pink);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--red-cmyk);
+    }
+
+    .modal-content h2 {
+      text-align: center;
+      color: var(--red-cmyk);
+    }
+
+    /* Password requirements */
+    .password-requirements {
+      color: var(--red-cmyk);
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form class="login-form" onsubmit="return validatePasswordAndRedirect()">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" value="Login">
+      <div class="password-requirements" id="passwordRequirements" style="display:none;">
+        Password must contain:
+        <ul>
+          <li>At least 8 characters</li>
+          <li>At least 1 uppercase letter</li>
+          <li>At least 1 lowercase letter</li>
+          <li>At least 1 digit</li>
+          <li>At least 1 special character</li>
+        </ul>
+      </div>
+    </form>
+    <a href="#" class="sign-up-button" onclick="showSignup()">Sign Up</a>
+  </div>
+
+  <!-- The sign-up form pop-up/modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideSignup()">&times;</span>
+      <h2>Sign Up</h2>
+      <form class="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="signupPassword" name="password" required>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <input type="submit" value="Sign Up">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showSignup() {
+      document.getElementById("signupModal").style.display = "block";
+      document.querySelector(".login-container").classList.add("hide-login");
+    }
+
+    function hideSignup() {
+      document.getElementById("signupModal").style.display = "none";
+      document.querySelector(".login-container").classList.remove("hide-login");
+    }
+
+    function validatePasswordAndRedirect() {
+      const password = document.getElementById("password").value;
+      const uppercaseRegex = /[A-Z]/;
+      const lowercaseRegex = /[a-z]/;
+      const digitRegex = /\d/;
+      const specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\-=/\\|]/;
+
+      let missingRequirements = [];
+
+      if (password.length < 8) {
+        missingRequirements.push("At least 8 characters");
+      }
+      if (!uppercaseRegex.test(password)) {
+        missingRequirements.push("At least 1 uppercase letter");
+      }
+      if (!lowercaseRegex.test(password)) {
+        missingRequirements.push("At least 1 lowercase letter");
+      }
+      if (!digitRegex.test(password)) {
+        missingRequirements.push("At least 1 digit");
+      }
+      if (!specialCharRegex.test(password)) {
+        missingRequirements.push("At least 1 special character");
+      }
+
+      if (missingRequirements.length > 0) {
+        document.getElementById("passwordRequirements").style.display = "block";
+        document.getElementById("passwordRequirements").innerHTML =
+          "Password must contain:<ul>" +
+          missingRequirements.map(req => `<li>${req}</li>`).join("") +
+          "</ul>";
+        return false;
+      }
+
+      // Redirect to the specified page in a new tab
+      window.open("https://www.google.com", "_blank");
+      return true;
+    }
+  </script>
+</body>
+
+</html>
