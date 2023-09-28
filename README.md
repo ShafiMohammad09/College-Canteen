@@ -1,7 +1,8 @@
 # College Canteen Website
 
 
-![image](https://github.com/ShafiMohammad09/College-Canteen/assets/128287059/c8b27cf3-1528-4f00-9337-7a98f57e21f8)
+![image](https://github.com/ShafiMohammad09/College-Canteen/assets/128287059/f331462b-9fee-44d2-8a31-b112de8e76ca)
+
 
 
 **Visit the deployed College Canteen Website: [Here](https://shafimohammad09.github.io/College-Canteen/)** 🚀
