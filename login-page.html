@@ -18,9 +18,6 @@
 
     body {
       background-color: var(--champagne-pink); /* Background color set to champagne-pink */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -141,11 +138,51 @@
       color: var(--red-cmyk);
       margin-top: 10px;
     }
+      .navbar{
+        background-color:rgb(191 52 52);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+      }
+      .navbar ul{
+        overflow: auto;
+        margin: 0;
+        padding: 0  ;
+      }
+      .navbar li{
+        float: left;
+        list-style: none;
+        margin: 20px 5px;
+      }
+      .navbar li a {
+        padding: 5px 5px;
+        padding-left: 20px;
+        text-decoration: none;
+        color: white;
+        font-size:25px;
+        font-weight: 900;
+      }
+      .myaccount{
+        padding-left: 1300px;
+      }
 
   </style>
 </head>
 
 <body>
+  <header>
+    <nav class="navbar">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li class = "myaccount"><a href="login-page.html">My Account</a></li>
+          <li class = "cart"><a>Cart</a></li>
+      </ul>
+      
+    </nav>
+  </header>
   <div class="login-container">
     <h1>Login</h1>
     <form class="login-form" onsubmit="return validatePasswordAndRedirect()">
