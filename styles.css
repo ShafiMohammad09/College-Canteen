@@ -10,7 +10,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
 
 body{
     height: 100vh;
@@ -160,7 +162,8 @@ body{
 }
 .hero-text h1{
     font-family: 'Neonblitz Regular', sans-serif;
-    color: hsla(0, 96%, 49%, 0.838);
+    color: rgba(245, 245, 245, 0.825);
+    box-shadow: 0 0 240px red;
     outline: none;
     animation: animate 4s linear infinite;
 }
@@ -168,7 +171,8 @@ body{
 @keyframes animate{
     0%{
         color: hsl(0, 92%, 34%);
-        box-shadow: none;
+        text-shadow: none;
+        box-shadow: 0 0 80px red;
     }
 
     100%{
@@ -177,8 +181,7 @@ body{
         0 0 20px red,
         0 0 40px red,
         0 0 60px red,
-        0 0 80px red,
-        0 0 160px red;
+        0 0 80px red;
     }
 }
 .hero-img{
