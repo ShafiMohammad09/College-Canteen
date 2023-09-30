@@ -355,3 +355,311 @@ font-family: 'Monoton', cursive;
   .card-pt3{
     height: 8em;
   }
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    /* Hamburger Menu Icon */
+    .hamburger-menu label {
+        width: 24px;
+        height: 16px;
+    }
+
+    .hamburger-menu span {
+        height: 2px;
+        margin-bottom: 3px;
+    }
+
+    /* Navigation */
+    .rnavbox a {
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 20px;
+    }
+
+    /* Hero Section */
+    .hero-text h1 {
+        font-size: 3em;
+    }
+
+    /* Buttons */
+    #btn1, #btn2 {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    /* Body Section */
+    .bar {
+        padding: 8px 12px;
+    }
+
+    .icon {
+        height: 2em;
+        width: 2em;
+    }
+
+    .icon-text {
+        font-size: 0.9em;
+    }
+
+    /* Header */
+    #header h1 {
+        font-size: 1.8rem;
+    }
+
+    #header p {
+        font-size: 1.2rem;
+    }
+
+    /* Card Styles */
+    .card {
+        max-width: 300px;
+    }
+
+    .card-text {
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+
+    .card-body {
+        font-size: 0.9rem;
+    }
+
+    .card-price {
+        width: 45px;
+        height: 45px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    /* Navigation */
+    .lnavbox, .rnavbox {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .rnavbox a {
+        font-size: 14px;
+        padding: 10px 16px;
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    /* Buttons */
+    #btn1, #btn2 {
+        padding: 10px 18px;
+        font-size: 0.8em;
+    }
+
+    /* Body Section */
+    .bar {
+        padding: 6px 10px;
+    }
+
+    .icon {
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    .icon-text {
+        font-size: 0.8em;
+    }
+
+    /* Header */
+    #header h1 {
+        font-size: 1.5rem;
+    }
+
+    #header p {
+        font-size: 1rem;
+    }
+
+    /* Card Styles */
+    .card {
+        max-width: 100%;
+    }
+
+    .card-text {
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .card-body {
+        font-size: 0.8rem;
+    }
+
+    .card-price {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+/* Laptop Styles */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    /* Hamburger Menu Icon */
+    .hamburger-menu label {
+        width: 26px;
+        height: 18px;
+    }
+
+    .hamburger-menu span {
+        height: 2px;
+        margin-bottom: 3px;
+    }
+
+    /* Navigation */
+    .rnavbox a {
+        font-size: 16px;
+        padding: 10px 14px;
+        border-radius: 20px;
+    }
+
+    /* Hero Section */
+    .hero-text h1 {
+        font-size: 4em;
+    }
+
+    /* Buttons */
+    #btn1, #btn2 {
+        padding: 14px 24px;
+        font-size: 1.2em;
+    }
+
+    /* Body Section */
+    .bar {
+        padding: 10px 16px;
+    }
+
+    .icon {
+        height: 2em;
+        width: 2em;
+    }
+
+    .icon-text {
+        font-size: 1em;
+    }
+
+    /* Header */
+    #header h1 {
+        font-size: 2.5rem;
+    }
+
+    #header p {
+        font-size: 1.4rem;
+    }
+
+    /* Card Styles */
+    .card {
+        max-width: 350px;
+    }
+
+    .card-text {
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 2rem;
+    }
+
+    .card-body {
+        font-size: 1rem;
+    }
+
+    .card-price {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+}
+
+/* MacBook Styles */
+@media (min-width: 1367px) and (max-width: 1440px) {
+    /* Hamburger Menu Icon */
+    .hamburger-menu label {
+        width: 28px;
+        height: 20px;
+    }
+
+    .hamburger-menu span {
+        height: 2px;
+        margin-bottom: 4px;
+    }
+
+    /* Navigation */
+    .rnavbox a {
+        font-size: 18px;
+        padding: 12px 16px;
+        border-radius: 20px;
+    }
+
+    /* Hero Section */
+    .hero-text h1 {
+        font-size: 4.5em;
+    }
+
+    /* Buttons */
+    #btn1, #btn2 {
+        padding: 16px 28px;
+        font-size: 1.4em;
+    }
+
+    /* Body Section */
+    .bar {
+        padding: 12px 20px;
+    }
+
+    .icon {
+        height: 2.5em;
+        width: 2.5em;
+    }
+
+    .icon-text {
+        font-size: 1.2em;
+    }
+
+    /* Header */
+    #header h1 {
+        font-size: 3rem;
+    }
+
+    #header p {
+        font-size: 1.6rem;
+    }
+
+    /* Card Styles */
+    .card {
+        max-width: 400px;
+    }
+
+    .card-text {
+        height: auto;
+    }
+
+    .card-title {
+        font-size: 2.5rem;
+    }
+
+    .card-body {
+        font-size: 1.2rem;
+    }
+
+    .card-price {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+}
+
+
