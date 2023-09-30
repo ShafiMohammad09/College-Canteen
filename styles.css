@@ -15,7 +15,7 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color: #F6DDD3ff;
+    background-image: linear-gradient(to right,hsl(0, 93%, 12%),hsl(0, 64%, 54%));
 }
 
 
@@ -46,7 +46,9 @@ body{
         display: block;
         height: 4px;
         width: 100%;
-        background-color: rgb(252, 3, 3); /* Hamburger lines color */
+        background-color: rgba(245, 245, 245, 0.741); /* Hamburger lines color */
+        box-shadow: 0 0 5px red;
+        cursor: pointer;
         margin-bottom: 5px;
         border-radius: 2px;
         position: absolute;
@@ -98,7 +100,8 @@ body{
 
 .menu-items a {
     text-decoration: none;
-    color: #333;
+    color: black;
+    text-shadow: 0 0 2px white;
     font-size: 1.2rem;
 }
 
@@ -128,7 +131,8 @@ body{
 .rnavbox a{
       padding: 0 5px;
     font-size: 20px;
-    color: rgb(241, 11, 11);
+    color: rgba(245, 245, 245, 0.753);
+    text-shadow: 0 0 5px red;
     text-decoration: none;
 }
 
@@ -156,7 +160,26 @@ body{
 }
 .hero-text h1{
     font-family: 'Neonblitz Regular', sans-serif;
-    color: red;
+    color: hsla(0, 96%, 49%, 0.838);
+    outline: none;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        color: hsl(0, 92%, 34%);
+        box-shadow: none;
+    }
+
+    100%{
+        color: rgba(245, 245, 245, 0.825);
+        text-shadow: 0 0 10px red,
+        0 0 20px red,
+        0 0 40px red,
+        0 0 60px red,
+        0 0 80px red,
+        0 0 160px red;
+    }
 }
 .hero-img{
     position: absolute;
@@ -167,8 +190,7 @@ body{
     z-index: 1;
 }
 .hero-img img{
-    background-color: transparent;
-   
+    background-color: transparent;  
 }
 
 .part2{
@@ -176,29 +198,27 @@ body{
     z-index: 1;
 
 }
-#btn1{
-    color: white;
-    background-color: red;
+
+.red{
+    width :40vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom-right,hsl(199,85%,5%),hsl(198, 37%, 39%));
+    align-items: start;
+}
+#btn1,#btn2{
+    color: black;
+    background-color: rgba(245, 245, 245, 0.804);
     padding: 10px;
     width: 9em;
     height: 3em;
     font-size: 1em;
     margin: 0 20px;
     border-radius: 2em;
-    border:1px solid red;
+    border:2px solid white;
+    box-shadow: 0 0 10px white;
 }
 
-#btn2{
-    color: black;
-    background-color: rgba(255, 0, 0, 0.025);
-    padding: 10px;
-    width: 9em;
-    height: 3em;
-    font-size: 1em;
-    margin: 0 20px;
-    border-radius: 2em;
-    border: 1px solid red;
-}
+
 
 /* Apply hover effects for both buttons */
 .btn:hover {
@@ -208,14 +228,12 @@ body{
 
 /* Add specific hover effects for btn1 */
 #btn1:hover {
-    background-color: darkred;
-    border-color: darkred;
+    background-color: rgba(255, 255, 255, 0.588);
 }
 
 /* Add specific hover effects for btn2 */
 #btn2:hover {
-    background-color: rgba(255, 0, 0, 0.1);
-    border-color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.588);
 }
 
 .body-section{
@@ -292,12 +310,14 @@ font-family: 'Monoton', cursive;
     align-content: start;
     padding:40px 20px;
     gap: 15px;
+    overflow: hidden;
   }
   .card{
     display:flex;
     flex-direction:column;
     width:400px;
     margin-bottom:60px;
+    perspective: 100px;
   }
   .card>div{
     box-shadow:0 15px 20px 0 rgba(0,0,0,0.5);
@@ -305,6 +325,8 @@ font-family: 'Monoton', cursive;
   .card-image{
     width: 320px;
     height: 250px;
+    transition: transform 1s;
+    animation: scroll 40% linear infinite;
 }
   
   .card-image>img{
@@ -347,11 +369,23 @@ font-family: 'Monoton', cursive;
     align-items:center;
   }
 
+
+  .card-image:hover{
+    transform: translateZ(20px);
+  }
   .header{
     margin:2% 41%;
   }
   
+   @keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
 
+    100%{
+        transform: translateX(calc(-250px * 3));
+    }
+   }
   .card-pt3{
     height: 8em;
   }
