@@ -134,7 +134,7 @@ body{
       padding: 0 5px;
     font-size: 20px;
     color: rgba(245, 245, 245, 0.753);
-    text-shadow: 0 0 5px red;
+    text-shadow: 0 0 2px whitesmoke;
     text-decoration: none;
 }
 
@@ -218,7 +218,7 @@ body{
     margin: 0 20px;
     border-radius: 2em;
     border:2px solid white;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 5px white;
 }
 
 
@@ -264,6 +264,9 @@ body{
     flex-wrap: wrap;
     padding:5px 20px;
     justify-content:space-evenly; 
+    border-color: white;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
 }
 
 .icon{
@@ -294,14 +297,16 @@ font-family: 'Monoton', cursive;
     justify-content: center;
 }
 
-#header{
+.header{
     margin:20px;
-  }
-  #header>h1{
+    color: aliceblue;
+    outline: none;
     text-align:center;
-    font-size:3rem;
   }
-  #header>p{
+  .header>h1{
+    font-size : 3rem;
+  }
+  .header>p{
     text-align:center;
     font-size:1.5rem;
     font-style:italic;
@@ -313,7 +318,6 @@ font-family: 'Monoton', cursive;
     align-content: start;
     padding:40px 20px;
     gap: 15px;
-    overflow: hidden;
   }
   .card{
     display:flex;
@@ -321,16 +325,27 @@ font-family: 'Monoton', cursive;
     width:400px;
     margin-bottom:60px;
     perspective: 100px;
+    animation: slide 4s infinite linear;
+    transition: transform 0.8s;
   }
+   @keyframes slide{
+     0%{
+        transform: translateX(0%);
+     }
+     100%{
+        transform: translateX(5%);
+     }
+   }
+
   .card>div{
     box-shadow:0 15px 20px 0 rgba(0,0,0,0.5);
   }
   .card-image{
     width: 320px;
     height: 250px;
-    transition: transform 1s;
-    animation: scroll 40% linear infinite;
+    transition: transform 0.8s;
 }
+
   
   .card-image>img{
     width:100%;
@@ -374,7 +389,7 @@ font-family: 'Monoton', cursive;
 
 
   .card-image:hover{
-    transform: translateZ(20px);
+    transform: translateZ(15px);
   }
   .header{
     margin:2% 41%;
