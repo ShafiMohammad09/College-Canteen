@@ -205,6 +205,19 @@
       color: var(--red-cmyk);
       margin-top: 10px;
     }
+    .nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav a{
+      text-decoration:none ;
+      color: red;
+      font-size: 2em;
+    }
+    .nav img{
+      width: 50px;
+    }
 
   </style>
 </head>
@@ -212,23 +225,10 @@
 <body>
   <!-- Nav section -->
   <div class="navcontainer">
-    <div class="left">
-      <img src="/images/my account.png" alt="">
-      <a href="login-page.html">My Account</a>
+    <div class="nav">
+      <img src="images/hone.png" alt="">
+      <a href="index.html">Home</a>
     </div>
-    <div class="center">
-      <nav class = "navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-    <fiv class="right">
-      <img src="/images/cart.png" alt="">
-      <a href="">Cart</a>
-    </fiv>
 </div>
   <div class="login-container">
     <h1>Login</h1>
