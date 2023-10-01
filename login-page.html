@@ -4,7 +4,73 @@
 <head>
   <title>Login Page</title>
   <style>
+    *{
+      margin: 0;padding: 0;
+    }
     /* CSS HEX colors */
+    .left{
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top:10px;
+      }
+      .left img{
+        width: 30px;
+        display: flex;
+        margin: auto;
+      }
+      .left a{
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: red;
+      }
+      .center{
+        width: 30%;
+        margin: 10px auto;
+      }
+      
+      .navbar{
+        background-color: rgb(128, 0, 0);
+        height: 43px;
+        border-radius: 10px;
+        padding-top: 7px;
+
+      }
+      .navbar li{
+        display: inline-block;
+      }
+      .center nav ul li a{
+        font-size: 30px;
+        padding: 5px;
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        margin: 34px 35px;
+      }
+      .center nav ul li a:hover{
+        font-weight: normal;
+        background-color: rgb(200, 8, 8);
+      }
+      .right{
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top:10px;
+      }
+      .right a{
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        color: red;
+        font-size: 20px;
+      }
+      .right img{
+        width: 30px;
+        display: flex;
+        margin: auto;
+      }
     :root {
       --cinereous: #90807Fff;
       --champagne-pink: #F6DDD3ff;
@@ -22,8 +88,6 @@
       background-repeat: no-repeat;
       background-position: center;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
     .login-container {
@@ -146,6 +210,26 @@
 </head>
 
 <body>
+  <!-- Nav section -->
+  <div class="navcontainer">
+    <div class="left">
+      <img src="/images/my account.png" alt="">
+      <a href="login-page.html">My Account</a>
+    </div>
+    <div class="center">
+      <nav class = "navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <fiv class="right">
+      <img src="/images/cart.png" alt="">
+      <a href="">Cart</a>
+    </fiv>
+</div>
   <div class="login-container">
     <h1>Login</h1>
     <form class="login-form" onsubmit="return validatePasswordAndRedirect()">

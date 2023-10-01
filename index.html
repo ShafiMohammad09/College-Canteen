@@ -7,35 +7,91 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     <title>College-Canteen</title>
+    <style>
+      .left{
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top:10px;
+      }
+      .left img{
+        width: 30px;
+        display: flex;
+        margin: auto;
+      }
+      .left a{
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: red;
+      }
+      .center{
+        width: 30%;
+        margin: 10px auto;
+      }
+      
+      .navbar{
+        background-color: rgb(128, 0, 0);
+        height: 50px;
+        border-radius: 10px;
+        padding-top: 7px;
+
+      }
+      .navbar li{
+        display: inline-block;
+      }
+      .center nav ul li a{
+        font-size: 30px;
+        padding: 5px;
+        color: white;
+        text-decoration: none;
+        margin: 34px 35px;  
+      }
+      .center nav ul li a:hover{
+        font-weight: normal;
+        background-color: rgb(200, 0, 0);
+      }
+      .right{
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top:10px;
+      }
+      .right a{
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        color: red;
+        font-size: 20px;
+      }
+      .right img{
+        width: 30px;
+        display: flex;
+        margin: auto;
+      }
+    </style>
 </head>
 <body>
     <!-- Nav section -->
     <div class="navcontainer">
-        <div class="lnavbox">
-            <nav class="hamburger-menu">
-                <input type="checkbox" id="toggle" />
-                <label for="toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-                <ul class="menu-items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
+        <div class="left">
+          <img src="/images/my account.png" alt="">
+          <a href="login-page.html">My Account</a>
         </div>
-        <div class="rnavbox">
-            <div class="navbox1">
-                <span class="material-symbols-outlined">account_circle</span>
-                <a href="#">My Account</a>
-            </div>
-            <div class="navbox">
-                <span class="material-symbols-outlined">shopping_cart</span>
-                <a href="#">Cart</a>
-            </div>
+        <div class="center">
+          <nav class = "navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
         </div>
+        <fiv class="right">
+          <img src="/images/cart.png" alt="">
+          <a href="">Cart</a>
+        </fiv>
     </div>
 
     <div class="hero-section">

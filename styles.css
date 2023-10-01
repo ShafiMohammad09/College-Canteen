@@ -16,6 +16,7 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: #F6DDD3ff;
+    overflow-x: hidden;
 }
 
 
@@ -106,7 +107,6 @@ body{
 
 
 .navcontainer{
-    display: flex;
     width: 100vw;
     /* border-bottom: 1px solid black; */
     padding:7   px 0;
@@ -167,6 +167,7 @@ body{
     z-index: 1;
 }
 .hero-img img{
+    margin: 60px;
     background-color: transparent;
    
 }
