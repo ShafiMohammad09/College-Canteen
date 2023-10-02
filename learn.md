@@ -22,6 +22,10 @@ Welcome to the College Canteen Website learning resources! This document provide
 
 - [Codecademy](https://www.codecademy.com/learn/introduction-to-javascript): Codecademy provides interactive coding lessons on various programming languages including JavaScript.
 
+- https://web-dev-resources.com/#/: contains all resources relating to web development.
+  
+- https://web.dev/learn/: An interactive tutorial on web development.
+
 ## Community Forums
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/html): Stack Overflow is a widely used community platform for asking questions and finding answers related to web development.
