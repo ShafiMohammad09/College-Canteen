@@ -16,9 +16,14 @@ body{
     height: 100vh;
     width: 100vw;
     background-color: #F6DDD3ff;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-
+.main{
+    transition: 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /* Hamburger Menu Icon */
 .hamburger-menu {
@@ -40,15 +45,16 @@ body{
         width: 30px;
         height: 20px;
         position: relative;
+        cursor: pointer;
     }
 
     .hamburger-menu span {
         display: block;
         height: 4px;
         width: 100%;
-        background-color: rgb(252, 3, 3); /* Hamburger lines color */
+        background-color: rgb(238, 15, 15); /* Hamburger lines color */
         margin-bottom: 5px;
-        border-radius: 2px;
+        border-radius: 10 px;
         position: absolute;
         left: 0;
         transition: transform 0.3s ease;
@@ -82,13 +88,21 @@ body{
     }
 
 .menu-items {
-    display: none;
+    position: absolute;
+    margin-top: 20px;
+    border-radius: 15px;
+    background: white;
+    padding: 25px;
+    width: 20vw;
     list-style: none;
-    padding: 0;
+    z-index: 1;
+    transform: scale(0);
+    transition: 400ms ease;
+
 }
 
 .hamburger-menu input[type="checkbox"]:checked ~ .menu-items {
-    display: block;
+    transform: scale(1);
 }
 
 .menu-items li {
@@ -97,11 +111,21 @@ body{
 
 
 .menu-items a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: #272424;
     font-size: 1.2rem;
+    transition: 300ms ease-in-out;
+    font-weight: 500;
 }
 
+.menu-items a:hover{
+    background: rgb(238, 15, 15);
+    border-radius: 10px;
+    color: white;
+    
+}
 
 
 
@@ -109,7 +133,7 @@ body{
     display: flex;
     width: 100vw;
     /* border-bottom: 1px solid black; */
-    padding:7   px 0;
+    padding: 15px;
     justify-content: baseline;
    
 }
@@ -186,24 +210,28 @@ body{
     margin: 0 20px;
     border-radius: 2em;
     border:1px solid red;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.192);
 }
 
 #btn2{
-    color: black;
-    background-color: rgba(255, 0, 0, 0.025);
+    color: rgb(238, 15, 15);
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     width: 9em;
     height: 3em;
     font-size: 1em;
+    text-align: center;
     margin: 0 20px;
     border-radius: 2em;
-    border: 1px solid red;
+    border: none;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.192);
 }
 
 /* Apply hover effects for both buttons */
 .btn:hover {
-    transform: scale(0.9);
+    transform: scale(1.07);
     cursor: pointer;
+    transition: 200ms ease-in-out;
 }
 
 /* Add specific hover effects for btn1 */
@@ -214,8 +242,8 @@ body{
 
 /* Add specific hover effects for btn2 */
 #btn2:hover {
-    background-color: rgba(255, 0, 0, 0.1);
-    border-color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.753);
+    color: white;
 }
 
 .body-section{
