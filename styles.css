@@ -6,6 +6,24 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Bungee+Inline&family=Monoton&display=swap');
 
+@media screen and (max-width: 768px) {
+    .navcontainer {
+        flex-direction: column;
+    }
+
+    .menu-items {
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hamburger-menu input[type="checkbox"]:checked ~ .menu-items {
+        display: block;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
