@@ -12,170 +12,87 @@
     box-sizing: border-box;
 }
 
+
 body{
     height: 100vh;
     width: 100vw;
     background-color: #F6DDD3ff;
 }
 
-
-
-/* Hamburger Menu Icon */
-.hamburger-menu {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    margin: 4px 10px;
+.navbar{
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
 }
 
-    .hamburger-menu input[type="checkbox"] {
-        display: none;
-    }
+.nav1 ul{
+    display: flex;
+}
 
-    .hamburger-menu label {
-        display: block;
-        width: 30px;
-        height: 20px;
-        position: relative;
-    }
-
-    .hamburger-menu span {
-        display: block;
-        height: 4px;
-        width: 100%;
-        background-color: rgb(252, 3, 3); /* Hamburger lines color */
-        margin-bottom: 5px;
-        border-radius: 2px;
-        position: absolute;
-        left: 0;
-        transition: transform 0.3s ease;
-    }
-
-        .hamburger-menu span:nth-child(1) {
-            top: 0;
-        }
-
-        .hamburger-menu span:nth-child(2) {
-            top: 8px;
-        }
-
-        .hamburger-menu span:nth-child(3) {
-            top: 16px;
-        }
-
-    /* Styles for Hamburger Menu when Checked (Open) */
-    .hamburger-menu input[type="checkbox"]:checked + label span:nth-child(1) {
-        top: 8px;
-        transform: rotate(45deg);
-    }
-
-    .hamburger-menu input[type="checkbox"]:checked + label span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger-menu input[type="checkbox"]:checked + label span:nth-child(3) {
-        top: 8px;
-        transform: rotate(-45deg);
-    }
-
-.menu-items {
-    display: none;
+.nav1 ul li{
     list-style: none;
-    padding: 0;
 }
-
-.hamburger-menu input[type="checkbox"]:checked ~ .menu-items {
-    display: block;
-}
-
-.menu-items li {
-    margin-bottom: 10px;
-}
-
-
-.menu-items a {
+.nav1 ul li a{
     text-decoration: none;
-    color: #333;
-    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    padding: .5rem 2rem;
+    font-size: 1.6rem;
+    border-radius: 20px;
 }
-
-
-
-
-.navcontainer{
+.nav1 ul li a:hover{
+    color: red;
+    background-color: white;
+}
+.nav2{
+    font-weight: bold;
+    color: white;
     display: flex;
-    width: 100vw;
-    /* border-bottom: 1px solid black; */
-    padding:7   px 0;
-    justify-content: baseline;
-   
+    font-size: 1.6rem;
 }
-.lnavbox{
+.nav2-1{
     display: flex;
-    width: 47%;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 2rem;
+    flex-direction: column;
 }
-.rnavbox{
-    display: flex;
-    width: 50%;
-    justify-content: end;
-    gap: 20px;
-    
-}
-
-.rnavbox a{
-      padding: 0 5px;
-    font-size: 20px;
-    color: rgb(241, 11, 11);
+.nav2-1 a{
+    color: white;
     text-decoration: none;
 }
-
+.nav2-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nav2-2 a{
+    color: white;
+    text-decoration: none;
+}
 
 .hero-section{
-    /* border-bottom: 1px solid black; */
-   height: 95vh;
-   width: 100vw; 
-   
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
-
 .part1{
-    position: relative;
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.hero-text{
-    position: relative;
-    font-size: 7em;
-    z-index: 0;
-    top: -9%;
-}
+
+
 .hero-text h1{
+    font-size: 10rem;
     font-family: 'Neonblitz Regular', sans-serif;
     color: red;
 }
-.hero-img{
-    position: absolute;
-    top: 17%;
-    left: 15%;   
-    
-    bottom:0;
-    z-index: 1;
-}
-.hero-img img{
-    background-color: transparent;
-   
-}
 
-.part2{
-    display: flex;
-    z-index: 1;
-
-}
 #btn1{
     color: white;
     background-color: red;
@@ -218,7 +135,9 @@ body{
     border-color: rgba(255, 0, 0, 0.1);
 }
 
+
 .body-section{
+    margin-top: 3em;
     height:100em;
     width: 100vw;
 }
@@ -288,6 +207,7 @@ font-family: 'Monoton', cursive;
   .container{
     width:100vw;
     display:flex;
+    flex-wrap: wrap;
     justify-content:space-around;
     align-content: start;
     padding:40px 20px;
@@ -348,10 +268,105 @@ font-family: 'Monoton', cursive;
   }
 
   .header{
-    margin:2% 41%;
+    margin:2% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header h1{
+    font-size: 3rem;
+  }
+  .header p{
+    font-size: 1.rem;
   }
   
 
   .card-pt3{
     height: 8em;
   }
+
+  .burger{
+    display: none;
+    top: 2.5%;
+    left: 5%;
+    position: absolute;
+
+  }
+  .line{
+    width: 30px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 3px
+  }
+
+    /* Website Responsivness */
+    @media only screen and (max-width: 900px) {
+        .burger{
+            display: block;
+        }
+        .navbar{
+            flex-direction: column;
+            height: 15rem;
+            transition: all 0.3s ease-out;
+        }
+        .nav1 ul{
+            margin-top: 1rem;
+            flex-direction: column;
+            text-align: center;
+        }
+        .nav1 ul li{
+            margin-bottom: 1.2rem;
+        }
+        .bar{
+            width: 85%;
+        }
+        .h-nav{
+            height: 4.5em;
+        }
+        .v-class{
+            opacity: 0;
+          }
+          .nav2{
+            width: 100%;
+            justify-content: space-evenly;
+          }
+        .nav2-1{
+            padding: 0;
+        }
+    }
+    @media only screen and (max-width: 700px) {
+        .hero-text h1{
+            font-size: 7rem;
+        }
+        .hero-img img{
+            width: 25rem;
+        }
+        .bar{
+            width: 95%;
+        }
+      }
+    @media only screen and (max-width: 500px) {
+        .hero-text h1{
+            font-size: 5rem;
+        }
+        .hero-img img{
+            width: 20rem;
+        }
+        #btn1{
+            width: 7em;
+        }
+        #btn2{
+            width: 7em;
+        }
+        .bar{
+            padding: 0;
+        }
+        .icon{
+            height: 2em;
+            width: 2em;
+        }
+        .icon-text{
+            font-size: .9em;
+        }
+      }
