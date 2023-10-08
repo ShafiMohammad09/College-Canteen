@@ -19,6 +19,66 @@ body{
 }
 
 
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #F6DDD3ff  ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.navbar .logo-text {
+    display: inline-block;
+    font-size: 33px;
+    color: #FF0000;
+    font-weight:bold;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Change link color on hover */
+.navbar-menu a:hover {
+    color: red; /* Change to your desired hover color */
+}
+
+
 
 /* Hamburger Menu Icon */
 .hamburger-menu {
@@ -103,16 +163,6 @@ body{
 }
 
 
-
-
-.navcontainer{
-    display: flex;
-    width: 100vw;
-    /* border-bottom: 1px solid black; */
-    padding:7   px 0;
-    justify-content: baseline;
-   
-}
 .lnavbox{
     display: flex;
     width: 47%;
