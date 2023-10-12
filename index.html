@@ -27,7 +27,10 @@
           </div>
           <div class="nav2-2">
             <i class="fa-solid fa-cart-shopping"></i>
-            <a href="#">My Account</a>
+            <div class="carttext">
+              <a href="#">Cart</a>
+              <span>0</span>
+            </div>
           </div>
         </div>
         <div class="burger">
@@ -37,7 +40,34 @@
         </div>
       </nav>
     </header>
+
+    <div class="cart-section displaynone">
+      <div class="cartuppertext">
+        <h1>CART</h1>
+        <i class="fa-solid fa-circle-xmark"></i>
+
+      </div>
+      <div id="cartModal" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Cart items will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+    <button id="checkout">Checkout</button>
+    </div>
       
+
+    <div class="backdrop displaynone">
+      
+    </div>
     <div class="hero-section">
         <div class="part1">
             <div class="hero-text">
@@ -94,10 +124,13 @@
                       </div>
                       <div class="card-text">
                         <p class="card-meal-type">Tiffins</p>
-                        <h2 class="card-title">Idly`</h2>
+                        <h2 class="card-title">Idly</h2>
                         <p class="card-body">"Idly: A timeless classic, much like the timeless pursuit of knowledge."
 
                         </p>
+                        <div class="addtocart">
+                          <Button class="addcart">Add to Cart</Button>
+                        </div>
                       </div>
                       <div class="card-price">₹0</div>
                     </div>
@@ -110,6 +143,9 @@
                         <h2 class="card-title">Dosa</h2>
                         <p class="card-body">"Enjoy the journey of education, much like savoring every bite of a well-made dosa."
                         </p>
+                        <div class="addtocart">
+                          <Button class="addcart">Add to Cart</Button>
+                        </div>
                       </div>
                       <div class="card-price">₹0</div>
                     </div>
@@ -122,6 +158,9 @@
                         <h2 class="card-title">Baji</h2>
                         <p class="card-body">"Spice up your student life with the excitement of baji and the thrill of knowledge."
                         </p>
+                        <div class="addtocart">
+                          <Button class="addcart">Add to Cart</Button>
+                        </div>
                       </div>
                       <div class="card-price">₹0</div>
                     </div>
@@ -134,6 +173,9 @@
                         <h2 class="card-title">Vada</h2>
                         <p class="card-body">"Vada: A crunchy companion for student adventures."
                         </p>
+                        <div class="addtocart">
+                          <Button class="addcart">Add to Cart</Button>
+                        </div>
                       </div>
                       <div class="card-price">₹0</div>
                     </div>
@@ -154,6 +196,9 @@
                     <p class="card-meal-type">Lunch/meat</p>
                     <h2 class="card-title">Fry-piece Biryani</h2>
                     <p class="card-body">"Study breaks just got a whole lot tastier - Fried Chicken Biryani FTW!"".</p>
+                    <div class="addtocart">
+                      <Button class="addcart">Add to Cart</Button>
+                    </div>
                   </div>
                   <div class="card-price">₹0</div>
                 </div>
@@ -165,6 +210,9 @@
                     <p class="card-meal-type">Lunch/Meat</p>
                     <h2 class="card-title">Dum Biryani</h2>
                     <p class="card-body">"Our Biryani: Bringing spice to your college life!"</p>
+                    <div class="addtocart">
+                      <Button class="addcart">Add to Cart</Button>
+                    </div>
                   </div>
                   <div class="card-price">₹0</div>
                 </div>
@@ -176,6 +224,9 @@
                     <p class="card-meal-type">Lunch/meat</p>
                     <h2 class="card-title">Friedrice</h2>
                     <p class="card-body">From textbooks to taste buds: Try our amazing Fried Rice!</p>
+                    <div class="addtocart">
+                      <Button class="addcart">Add to Cart</Button>
+                    </div>
                   </div>
                   <div class="card-price">₹0</div>
                 </div>
@@ -187,6 +238,9 @@
                     <p class="card-meal-type">availability</p>
                     <h2 class="card-title">coming soon</h2>
                     <p class="card-body"></p>
+                    <div class="addtocart">
+                          <Button class="addcart">Add to Cart</Button>
+                        </div>
                   </div>
                   <div class="card-price">₹0</div>
                 </div>
@@ -208,6 +262,9 @@
                 <h2 class="card-title">Veg Manchurian</h2>
                 <p class="card-body">"Veg Manchurian: The ultimate study break treat!"
                 </p>
+                <div class="addtocart">
+                  <Button class="addcart">Add to Cart</Button>
+                </div>
               </div>
               <div class="card-price">₹0</div>
             </div>
@@ -220,6 +277,9 @@
                 <h2 class="card-title">Chicken Manchurian</h2>
                 <p class="card-body">"Stay focused, enjoy the delicious distraction of Chicken Manchurian."
                 </p>
+                <div class="addtocart">
+                  <Button class="addcart">Add to Cart</Button>
+                </div>
               </div>
               <div class="card-price">₹0</div>
             </div>
@@ -232,6 +292,9 @@
                 <h2 class="card-title">Veg Puff</h2>
                 <p class="card-body">"Fueling student minds with savory veg puffs, one flaky bite at a time".
                 </p>
+                <div class="addtocart">
+                  <Button class="addcart">Add to Cart</Button>
+                </div>
               </div>
               <div class="card-price">₹0</div>
             </div>
@@ -244,6 +307,9 @@
                 <h2 class="card-title">Egg Puff</h2>
                 <p class="card-body">"Eggpuff: A pocket-sized burst of energy for hungry students on the go."
                 </p>
+                <div class="addtocart">
+                  <Button class="addcart">Add to Cart</Button>
+                </div>
               </div>
               <div class="card-price">₹0</div>
             </div>
@@ -263,6 +329,9 @@
             <div class="card-text card-pt3">
               <p class="card-meal-type">Soft drinks</p>
               <h2 class="card-title">Coca Cola</h2>
+              <div class="addtocart">
+                <Button class="addcart">Add to Cart</Button>
+              </div>
             </div>
             <div class="card-price">₹0</div>
           </div>
@@ -273,6 +342,9 @@
             <div class="card-text card-pt3">
               <p class="card-meal-type">Soft drinks</p>
               <h2 class="card-title">Thumpsup</h2>
+              <div class="addtocart">
+                <Button class="addcart">Add to Cart</Button>
+              </div>
             </div>
             <div class="card-price">₹0</div>
           </div>
@@ -283,6 +355,9 @@
             <div class="card-text card-pt3">
               <p class="card-meal-type">Icecreams</p>
               <h2 class="card-title">Chocabar</h2>
+              <div class="addtocart">
+                <Button class="addcart">Add to Cart</Button>
+              </div>
             </div>
             <div class="card-price">₹0</div>
           </div>
@@ -294,6 +369,9 @@
               <p class="card-meal-type">IceCreams</p>
               <h2 class="card-title">Cones/Cups</h2>
               <p class="card-body"></p>
+              <div class="addtocart">
+                <Button class="addcart">Add to Cart</Button>
+              </div>
             </div>
             <div class="card-price">₹0</div>
           </div>
@@ -302,6 +380,6 @@
        </div>
         </div>
     </div>
-    <script src="resp.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bungee+Inline&family=Monoton&display=swap');
 @font-face {
     font-family: 'Neonblitz Regular';
     src: url('FontsFree-Net-Neonblitz.ttf') format('truetype');
     
     /* You can also use other font formats like woff2, woff, etc. */
 }
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bungee+Inline&family=Monoton&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: visible;
 }
 
 
@@ -21,6 +22,8 @@ body{
 
 .navbar{
     background-color: red;
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,7 +41,7 @@ body{
     text-decoration: none;
     font-weight: bold;
     color: white;
-    padding: .5rem 2rem;
+    padding: 1px 2rem;
     font-size: 1.6rem;
     border-radius: 20px;
 }
@@ -73,7 +76,91 @@ body{
     color: white;
     text-decoration: none;
 }
+.carttext span{
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1px 7px;
+}
 
+.cart-section{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    background-color: brown;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+}
+.cartuppertext h1{
+    font-size: 2.5rem;
+}
+.cartuppertext i{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+#cartModal table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 400px;
+    text-align: center;
+    /* font-weight: bold; */
+    margin-top: 1rem;
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+}
+#cartModal table th{
+    font-size: 2rem;
+    padding: 12px 30px;
+}
+#cartModal table td{
+    font-size: 1.5rem;
+    padding: 12px 30px;
+}
+
+.cart-section h1{
+    color: white;
+    margin-top: 2rem;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.displaynone{
+    display: none;
+}
+
+#checkout{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: red;
+    border-radius: 15px;
+    padding: 10px 10px;
+}
+#checkout:hover{
+    background-color: red;
+    color: white;
+}
 .hero-section{
    display: flex;
    flex-direction: column;
@@ -81,6 +168,7 @@ body{
    align-items: center;
 }
 .part1{
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,12 +264,6 @@ body{
     align-items: center;
 }
 
-.icon-text{
-    font-family: 'Acme', sans-serif;
-font-family: 'Bungee Inline', cursive;
-font-family: 'Monoton', cursive;
-}
-
 .body-section-items{
     /* background-color: black; */
     display: flex;
@@ -235,13 +317,32 @@ font-family: 'Monoton', cursive;
     border-radius: 5px;
   }
   .card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin:-30px auto;
     margin-bottom:-50px;
-    height: 215px;
+    height: 250px;
     width: 250px;
     background-color:#fe7171b3;;
     color:#fff;
     padding:20px;
+  }
+
+  .addcart{
+    cursor: pointer;
+    color: white;
+    border: none;
+    margin-top: 7px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #971210e6;
+    border-radius: 20px;
+}
+.addcart:hover{
+    background-color: red;
   }
   .card-meal-type{
     font-style:italic;
@@ -288,7 +389,7 @@ font-family: 'Monoton', cursive;
 
   .burger{
     display: none;
-    top: 2.5%;
+    top: 20%;
     left: 5%;
     position: absolute;
 
@@ -301,13 +402,19 @@ font-family: 'Monoton', cursive;
   }
 
     /* Website Responsivness */
+    @media only screen and (max-width: 1400px) {
+        .cart-section{
+            width: 60%;
+        }
+    }
+
     @media only screen and (max-width: 900px) {
         .burger{
             display: block;
         }
         .navbar{
             flex-direction: column;
-            height: 15rem;
+            height: 16rem;
             transition: all 0.3s ease-out;
         }
         .nav1 ul{
@@ -334,6 +441,9 @@ font-family: 'Monoton', cursive;
         .nav2-1{
             padding: 0;
         }
+        .cart-section{
+            width: 100%;
+        }
     }
     @media only screen and (max-width: 700px) {
         .hero-text h1{
@@ -346,6 +456,14 @@ font-family: 'Monoton', cursive;
             width: 95%;
         }
       }
+    @media only screen and (max-width: 600px) {
+        #cartModal table th{
+            font-size: 1.5rem;
+        }
+        #cartModal table th{
+            font-size: 1.2rem;
+        }
+    }
     @media only screen and (max-width: 500px) {
         .hero-text h1{
             font-size: 5rem;
