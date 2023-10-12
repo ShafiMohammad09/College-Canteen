@@ -160,6 +160,10 @@ cartclose.addEventListener('click' , ()=>{
 
 let checkout = document.getElementById("checkout");
 checkout.addEventListener('click' , ()=>{
-
+    totalincart = 0;
     cartItems.innerHTML = "";
+    for (let index = 0; index < products.length; index++) {
+        products[index].incart = 0;
+    }
+    document.querySelector(".carttext span").textContent = totalincart;
 });
